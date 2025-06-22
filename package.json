@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "publish": "npm publish --access public"
   },
   "keywords": [
     "data-formula",
