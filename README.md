@@ -6,6 +6,8 @@ Flexible data processing with SQL, JsonPath, and transform support in pipeline s
 
 * **Less code** with this library use less code and get faster results.
 
+[Playground](https://codesandbox.io/p/sandbox/new)
+
 
 ## Install
 
