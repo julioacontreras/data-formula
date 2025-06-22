@@ -47,5 +47,5 @@ console.log(output.users_order_by_name);
 ## Install
 
 ```bash
-npm install formula
+npm install data-formula
 ```
