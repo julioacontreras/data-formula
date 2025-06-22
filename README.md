@@ -32,13 +32,16 @@ const actions = [
   {
     type: 'calcule',
     sql: `
-    SELECT 
+    SELECT
       name
     FROM
       users
     ORDER BY
       name
     `,
+    input: {
+      name: 'users',
+    }
     output: {
       name: 'users_order_by_name',
     },
@@ -102,10 +105,103 @@ const actions = [
     mapper: {
       id: 'id',
       name: 'name',
+      customer_id: '$.customer.id',
+      customer_name: '$.customer.name',
+    },
+    input: {
+      name: 'users',
+    },
+    output: {
+      name: 'users_transformed',
+    },
+  },
+  {
+    type: 'calcule',
+    sql: `
+    SELECT
+      customer_id,
+      customer_name,
+      SUM(COUNT(*)) as count
+    FROM
+      users_transformed
+    ORDER BY
+      name
+    `,
+    input: {
+      name: 'users_transformed',
+    }
+    output: {
+      name: 'users_group_by_company',
+    },
+  },
+];
+
+const output = formula(actions, input);
+console.log(output.users_group_by_company);
+/*
+[
+    {
+      count: 2,
+      customer_name: 'Company 1',
+    },
+    {
+      count: 1,
+      customer_name: 'Company 2',
+    }
+]
+*/
+```
+
+Mixed:
+
+```js
+import { formula } from 'data-formula';
+
+const input = {
+  users: [
+    {
+      id: 'U01',
+      name: 'John Connor',
+      event_at: '2025-06-01',
+      customer: {
+        id: 'C01',
+        name: 'Company 1',
+      },
+    },
+    {
+      id: 'U03',
+      name: 'Alice',
+      event_at: '2025-06-22',
+      customer: {
+        id: 'C01',
+        name: 'Company 1',
+      },
+    },
+    {
+      id: 'U02',
+      name: 'Bruce Lee',
+      event_at: '2025-06-12',
+      customer: {
+        id: 'C02',
+        name: 'Company 2',
+      },
+    },
+  ],
+};
+
+const actions = [
+  {
+    type: 'transform',
+    mapper: {
+      id: 'id',
+      name: 'name',
       ts: ['$.event_at', 'formatToTimestamp'],
       day: ['$.event_at', 'formatToDay'],
       customer_id: '$.customer.id',
       customer_name: '$.customer.name',
+    },
+    input: {
+      name: 'users',
     },
     output: {
       name: 'users_transformed',
