@@ -2,10 +2,11 @@
 
 Process data using SQL, JsonPath and transforms in pipes.
 
-## Dependencies
+## Install
 
-- Alasql [https://github.com/AlaSQL/alasql/wiki]
-- Jsonpath [https://www.npmjs.com/package/jsonpath]
+```bash
+npm install data-formula
+```
 
 ## General Usage
 
@@ -129,11 +130,7 @@ console.log(output.users_transformed);
 */
 ```
 
-## Install
 
-```bash
-npm install data-formula
-```
 
 ## Transform
 
