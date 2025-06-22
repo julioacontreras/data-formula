@@ -9,7 +9,7 @@ Process data using SQL, JsonPath and transforms in pipes.
 
 ## General Usage
 
-Is possible use SQL in browser without server:
+Is possible use SQL without server:
 
 ```js
 import { formula } from 'data-formula';
