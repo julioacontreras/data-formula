@@ -24,7 +24,6 @@ const formatToTimestamp = (value: string) => {
   return (new Date(value)).getTime()
 }
 
-
 const isFormatTimestamp = (field: string): boolean => {
   return field === 'formatToTimestamp'
 }
