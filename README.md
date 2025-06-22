@@ -105,6 +105,8 @@ const actions = [
     mapper: {
       id: 'id',
       name: 'name',
+      ts: ['$.event_at', 'formatToTimestamp'],
+      day: ['$.event_at', 'formatToDay'],
       customer_id: '$.customer.id',
       customer_name: '$.customer.name',
     },
@@ -115,39 +117,21 @@ const actions = [
       name: 'users_transformed',
     },
   },
-  {
-    type: 'calcule',
-    sql: `
-    SELECT
-      customer_id,
-      customer_name,
-      SUM(COUNT(*)) as count
-    FROM
-      users_transformed
-    ORDER BY
-      name
-    `,
-    input: {
-      name: 'users_transformed',
-    }
-    output: {
-      name: 'users_group_by_company',
-    },
-  },
 ];
 
 const output = formula(actions, input);
-console.log(output.users_group_by_company);
+console.log(output.users_transformed);
 /*
 [
     {
-      count: 2,
+      id: 'U01',
+      name: 'John Connor',
+      ts: 1748736000000,
+      day: '06',
+      customer_id: 'C01',
       customer_name: 'Company 1',
     },
-    {
-      count: 1,
-      customer_name: 'Company 2',
-    }
+    ...
 ]
 */
 ```
@@ -195,8 +179,6 @@ const actions = [
     mapper: {
       id: 'id',
       name: 'name',
-      ts: ['$.event_at', 'formatToTimestamp'],
-      day: ['$.event_at', 'formatToDay'],
       customer_id: '$.customer.id',
       customer_name: '$.customer.name',
     },
@@ -207,21 +189,39 @@ const actions = [
       name: 'users_transformed',
     },
   },
+  {
+    type: 'calcule',
+    sql: `
+    SELECT
+      customer_id,
+      customer_name,
+      SUM(COUNT(*)) as count
+    FROM
+      users_transformed
+    ORDER BY
+      name
+    `,
+    input: {
+      name: 'users_transformed',
+    }
+    output: {
+      name: 'users_group_by_company',
+    },
+  },
 ];
 
 const output = formula(actions, input);
-console.log(output.users_transformed);
+console.log(output.users_group_by_company);
 /*
 [
     {
-      id: 'U01',
-      name: 'John Connor',
-      ts: 1748736000000,
-      day: '06',
-      customer_id: 'C01',
+      count: 2,
       customer_name: 'Company 1',
     },
-    ...
+    {
+      count: 1,
+      customer_name: 'Company 2',
+    }
 ]
 */
 ```
