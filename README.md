@@ -1,4 +1,4 @@
-# Data Formula
+# Data Formula &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
 Process data using SQL, JsonPath and transforms in pipes.
 
@@ -258,3 +258,7 @@ Functions can use in mapper:
   }
 }
 ```
+
+### License
+
+React is [MIT licensed](./LICENSE).
