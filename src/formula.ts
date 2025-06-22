@@ -1,6 +1,6 @@
-import { calcule } from './calcule';
-import { useSumTotal } from './sum-total';
-import { useToFixed } from './to-fixed';
+import { calcule } from './calcule'
+import { useSumTotal } from './sum-total'
+import { useToFixed } from './to-fixed'
 import { transform } from './transform'
 import { Action, ActionCalcule, ActionTransform, Input } from './types'
  

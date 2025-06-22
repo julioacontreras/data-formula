@@ -1,4 +1,4 @@
-import alasql from "alasql"
+import alasql from 'alasql'
 
 export const useSumTotal = () => {
   alasql.fn.SUM_TOTAL = function () {

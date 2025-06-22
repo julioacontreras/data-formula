@@ -1,4 +1,4 @@
-import jsonpath from "jsonpath"
+import jsonpath from 'jsonpath'
 
 import { ActionTransform, Input } from './types'
 

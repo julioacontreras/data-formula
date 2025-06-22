@@ -1,5 +1,5 @@
-import alasql from "alasql"
-import { ActionCalcule, Input } from "./types"
+import alasql from 'alasql'
+import { ActionCalcule, Input } from './types'
 
 const loadTables = (input: Input) => {
   const tables = Object.keys(input)

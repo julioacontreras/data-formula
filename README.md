@@ -130,9 +130,24 @@ console.log(output.users_transformed);
 */
 ```
 
+## Structure
 
+### Transform
 
-## Transform
+```js
+{
+  type: 'transform',
+  mapper: <string, string || Array>[
+    // 'my_field_transformed': ['field' | 'function' | 'jsonpath']
+  ],
+  input: {
+    name: string
+  },
+  output: {
+    name: string
+  }
+}
+```
 
 Functions can use in mapper:
 
@@ -141,3 +156,18 @@ Functions can use in mapper:
 **formatToDay** Format date to a day
 
 **jsonpath** Also is posiible extrand information using jsonpath syntax `$.my_field` more info: [https://www.npmjs.com/package/jsonpath#jsonpath-syntax]
+
+### Calcule
+
+```js
+{
+  type: 'calcule',
+  sql: string, // sql query to filter, group or calcule
+  input: {
+    name: string
+  },
+  output: {
+    name: string
+  }
+}
+```

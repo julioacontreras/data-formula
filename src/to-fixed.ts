@@ -1,4 +1,4 @@
-import alasql from "alasql"
+import alasql from 'alasql'
 
 export const useToFixed = () => {
   alasql.fn.TO_FIXED = function (number, decimals) {
