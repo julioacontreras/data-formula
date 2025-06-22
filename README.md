@@ -39,9 +39,6 @@ const actions = [
     ORDER BY
       name
     `,
-    input: {
-      name: 'users',
-    }
     output: {
       name: 'users_order_by_name',
     },
@@ -201,9 +198,6 @@ const actions = [
     ORDER BY
       name
     `,
-    input: {
-      name: 'users_transformed',
-    }
     output: {
       name: 'users_group_by_company',
     },
@@ -259,9 +253,6 @@ Functions can use in mapper:
 {
   type: 'calcule',
   sql: string, // sql query to filter, group or calcule
-  input: {
-    name: string
-  },
   output: {
     name: string
   }

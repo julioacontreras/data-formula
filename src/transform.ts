@@ -61,11 +61,9 @@ export const transform = (action: ActionTransform, input: Input) => {
       } else {
         value = item[field]
       }
-
       if (value === null) {
         value = ''
       }
-
       fields[key] = value
     })
     dataTransformed.push(fields)
