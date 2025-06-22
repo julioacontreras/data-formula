@@ -1,27 +1,36 @@
 {
   "name": "data-formula",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+
+
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup",
     "clean": "rm -rf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "data-formula",
+    "formula",
+    "process data",
+    "sql file",
+    "transform data"
+  ],
+  "author": "Julio Contreras",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^9.29.0",
     "prettier": "^3.5.3",

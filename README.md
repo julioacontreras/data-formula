@@ -10,6 +10,8 @@ Process data using SQL, JsonPath and transforms in pipes.
 ## General Usage
 
 ```js
+import { formula } from 'data-formula';
+
 const input = {
   users: [
     {
