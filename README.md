@@ -2,7 +2,7 @@
 
 Process data using SQL, JsonPath and transforms in pipes.
 
-## Depedencies
+## Dependencies
 
 - Alasql [https://github.com/AlaSQL/alasql/wiki]
 - Jsonpath [https://www.npmjs.com/package/jsonpath]
