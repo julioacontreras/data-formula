@@ -1,6 +1,13 @@
-# Data Formula
+# Data Formula &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
-Process data using SQL, JsonPath and transforms in pipes.
+Flexible data processing with SQL, JsonPath, and transform support in pipeline steps.
+
+* **Simple to use** use json structure to get your resutls.
+
+* **Less code** with this library use less code and get faster results.
+
+Is possible use the library in the [playground](https://codesandbox.io/p/sandbox/data-formula-p9hht7).
+
 
 ## Install
 
@@ -8,7 +15,7 @@ Process data using SQL, JsonPath and transforms in pipes.
 npm install data-formula
 ```
 
-## General Usage
+## Code Examples
 
 Is possible use SQL without server:
 
@@ -258,3 +265,7 @@ Functions can use in mapper:
   }
 }
 ```
+
+### License
+
+React is [MIT licensed](./LICENSE).
