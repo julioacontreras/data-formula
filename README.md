@@ -1,6 +1,6 @@
 # Data Formula
 
-Pipes to process, calcule or transform data.
+Process data using SQL, JsonPath and transforms in pipes.
 
 ## Depedencies
 
