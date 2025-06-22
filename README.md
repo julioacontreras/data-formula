@@ -6,7 +6,7 @@ Flexible data processing with SQL, JsonPath, and transform support in pipeline s
 
 * **Less code** with this library use less code and get faster results.
 
-[Playground](https://codesandbox.io/p/sandbox/data-formula-p9hht7)
+Is possible use the library in the [playground](https://codesandbox.io/p/sandbox/data-formula-p9hht7).
 
 
 ## Install
@@ -15,7 +15,7 @@ Flexible data processing with SQL, JsonPath, and transform support in pipeline s
 npm install data-formula
 ```
 
-## General Usage
+## Code Examples
 
 Is possible use SQL without server:
 
