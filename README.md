@@ -2,7 +2,7 @@
 
 Flexible data processing with SQL, JsonPath, and transform support in pipeline steps.
 
-* **Simple to use** use json structure to get your rresutls.
+* **Simple to use** use json structure to get your resutls.
 
 * **Less code** with this library use less code and get faster results.
 
