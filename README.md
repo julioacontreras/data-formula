@@ -143,4 +143,4 @@ Functions can use in mapper:
 
 **formatToDay** Format date to a day
 
-**jsonpath** Also is posiible extrand information using jsonpath suntax `$.my_field` more info: [https://www.npmjs.com/package/jsonpath#jsonpath-syntax]
+**jsonpath** Also is posiible extrand information using jsonpath syntax `$.my_field` more info: [https://www.npmjs.com/package/jsonpath#jsonpath-syntax]
