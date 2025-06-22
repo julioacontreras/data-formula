@@ -1,0 +1,51 @@
+# Data Formula
+
+Pipes to process, calcule or transform data.
+
+## Depedencies
+
+- Alasql [https://github.com/AlaSQL/alasql/wiki]
+- Jsonpath [https://www.npmjs.com/package/jsonpath]
+
+## General Usage
+
+```js
+const input = {
+  users: [
+    {
+      id: 'U01',
+      name: 'John Connor',
+    },
+    {
+      id: 'U02',
+      name: 'Bruce Lee',
+    },
+  ],
+};
+
+const actions = [
+  {
+    type: 'calcule',
+    sql: `
+    SELECT 
+      name
+    FROM
+      users
+    ORDER BY
+      name
+    `,
+    output: {
+      name: 'users_order_by_name',
+    },
+  },
+];
+
+const output = formula(actions, input);
+console.log(output.users_order_by_name);
+```
+
+## Install
+
+```bash
+npm install formula
+```
