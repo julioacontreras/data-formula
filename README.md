@@ -1,6 +1,11 @@
 # Data Formula &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
-Process data using SQL, JsonPath and transforms in pipes.
+Flexible data processing with SQL, JsonPath, and transform support in pipeline steps.
+
+* **Simple to use** use json structure to get your rresutls.
+
+* **Less code** with this library use less code and get faster results.
+
 
 ## Install
 
