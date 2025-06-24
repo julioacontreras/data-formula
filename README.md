@@ -2,19 +2,23 @@
 
 Flexible data processing with SQL, JSONPath, and transform support in pipeline steps.
 
+## ✨ Features
+
 - **Simple to use** use JSON structure to get your resutls.
 
 - **Less code** with this library use less code and get faster results.
 
+## Playground
+
 Is possible use the library in the [playground](https://codesandbox.io/p/sandbox/data-formula-p9hht7).
 
-## Install
+## 🚀 Install
 
 ```bash
 npm install data-formula
 ```
 
-## Code Examples
+## 🎨 Code Examples
 
 Is possible use SQL without server:
 
@@ -226,7 +230,7 @@ console.log(output.users_group_by_company);
 */
 ```
 
-## Structure
+## 📚 Documentation
 
 ### Transform
 
@@ -284,6 +288,6 @@ Functions can use in mapper:
 }
 ```
 
-### License
+### 📄 License
 
 React is [MIT licensed](./LICENSE).
