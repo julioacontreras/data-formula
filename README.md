@@ -2,12 +2,11 @@
 
 Flexible data processing with SQL, JsonPath, and transform support in pipeline steps.
 
-* **Simple to use** use json structure to get your resutls.
+- **Simple to use** use json structure to get your resutls.
 
-* **Less code** with this library use less code and get faster results.
+- **Less code** with this library use less code and get faster results.
 
 Is possible use the library in the [playground](https://codesandbox.io/p/sandbox/data-formula-p9hht7).
-
 
 ## Install
 
@@ -234,6 +233,7 @@ console.log(output.users_group_by_company);
 ```js
 {
   type: 'transform',
+  schema: <string, string>,
   mapper: <string, string || Array>[
     // 'my_field_transformed': ['field' | 'function' | 'jsonpath']
   ],
@@ -260,6 +260,24 @@ Functions can use in mapper:
 {
   type: 'calcule',
   sql: string, // sql query to filter, group or calcule
+  output: {
+    name: string
+  }
+}
+```
+
+### Create rows
+
+```js
+{
+  type: 'create_rows',
+  schema: <string, string>,
+  forEach: <string, string>[
+    {
+      my_new_field_name: "$t:my text",
+      my_new_field_value: "$.original_field",
+    }
+  ]
   output: {
     name: string
   }
