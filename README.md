@@ -8,7 +8,7 @@ Flexible data processing in pipeline.
 
 - **SQL without server** use SQL in backend or frontend withput server.
 
-- **Simple to use** use JSON structure to get your resutls.
+- **Simple to use** use JSON structure to get your results.
 
 - **Less code** with this library use less code and get faster results.
 
