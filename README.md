@@ -1,8 +1,10 @@
 # Data Formula &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE)
 
-Flexible data processing with SQL, JSONPath, and transform support in pipeline steps.
+Flexible data processing in pipeline.
 
 ## ✨ Features
+
+- **SQL without server** use SQL in backend or frontend withput server.
 
 - **Simple to use** use JSON structure to get your resutls.
 
