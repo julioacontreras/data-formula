@@ -132,9 +132,9 @@ const actions = [
     mapper: {
       id: 'id',                                   // pass field id
       name: 'name',                               // pass field name
-      ts: ['$.event_at', 'formatToTimestamp'],    // get the attribute 'event_at' and transform in a timestamp
-      day: ['$.event_at', 'formatToDay'],         // get the attribute 'event_at' and extract the day
-      date: ['$.event_at', 'formatToDDMMYYYY'],   // get the attribute 'event_at' and transform to human date in format dd/mm/yyyy
+      ts: ['$.event_at', 'formatToTimestamp'],    // transform the attribute 'event_at' to a timestamp
+      day: ['$.event_at', 'formatToDay'],         // transform the attribute 'event_at' to a day
+      date: ['$.event_at', 'formatToDDMMYYYY'],   // transform the attribute 'event_at' to the format dd/mm/yyyy
       customer_id: '$.customer.id',               // from the input get value id in customer and copy in the field customer_id
       customer_name: '$.customer.name',           // from the input get value name in customer and copy in the field customer_name
     },
