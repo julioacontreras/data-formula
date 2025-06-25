@@ -43,7 +43,9 @@ const input = {
   ],
 };
 
-// The action do want extract. Will get your data and will execute the SQL to name and will return in the new data 'users_order_by_name' 
+// The action do want extract. Will get your data and will
+// execute the SQL to name and will return in the new
+// data 'users_order_by_name' 
 const actions = [
   {
     type: 'calcule',
