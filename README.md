@@ -29,6 +29,7 @@ Is possible use SQL without server:
 ```js
 import { formula } from 'data-formula';
 
+// The information you will process
 const input = {
   users: [
     {
@@ -42,6 +43,7 @@ const input = {
   ],
 };
 
+// The action do want extract
 const actions = [
   {
     type: 'calcule',
@@ -59,7 +61,10 @@ const actions = [
   },
 ];
 
+// Process data 
 const output = formula(actions, input);
+
+// Result
 console.log(output.users_order_by_name);
 /*
 [
