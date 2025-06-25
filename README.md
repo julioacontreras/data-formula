@@ -120,13 +120,23 @@ const input = {
 const actions = [
   {
     type: 'transform',
+    schema: {
+      id: 'string',
+      name: 'string',
+      ts: 'number', 
+      day: 'number',
+      date: 'string',
+      customer_id: 'string',
+      customer_name: 'string',
+    },
     mapper: {
-      id: 'id',
-      name: 'name',
-      ts: ['$.event_at', 'formatToTimestamp'],
-      day: ['$.event_at', 'formatToDay'],
-      customer_id: '$.customer.id',
-      customer_name: '$.customer.name',
+      id: 'id',                                   // pass field id
+      name: 'name',                               // pass field name
+      ts: ['$.event_at', 'formatToTimestamp'],    // get the attribute 'event_at' and transform in a timestamp
+      day: ['$.event_at', 'formatToDay'],         // get the attribute 'event_at' and extract the day
+      date: ['$.event_at', 'formatToDDMMYYYY'],   // get the attribute 'event_at' and transform to human date in format dd/mm/yyyy
+      customer_id: '$.customer.id',               // from the input get value id in customer and copy in the field customer_id
+      customer_name: '$.customer.name',           // from the input get value name in customer and copy in the field customer_name
     },
     input: {
       name: 'users',
@@ -146,6 +156,7 @@ console.log(output.users_transformed);
       name: 'John Connor',
       ts: 1748736000000,
       day: '06',
+      date: '12/06/2025',
       customer_id: 'C01',
       customer_name: 'Company 1',
     },
