@@ -4,6 +4,8 @@ Flexible data processing in pipeline.
 
 ## ✨ Features
 
+- **Transforms** change attributes in your data in a easy way.
+
 - **SQL without server** use SQL in backend or frontend withput server.
 
 - **Simple to use** use JSON structure to get your resutls.
